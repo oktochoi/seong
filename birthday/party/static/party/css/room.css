@@ -1,0 +1,33 @@
+.room{
+    text-align:center;
+    font-size:32px;
+    padding:20px;
+    border:40px;
+    color:black;
+    background-color:pink;
+}
+
+#back {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+
+
+  /* 호버 상태 */
+  #back:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+  }
+  
+  /* 포커스 상태 */
+  #back:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(38, 143, 255, 0.5);
+  }
+  

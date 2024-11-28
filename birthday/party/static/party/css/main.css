@@ -1,0 +1,184 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 20px;
+    background-color: #f1f1f1;
+}
+.content .section {
+    text-align: center;
+    flex: 1;
+    margin: 0 10px;
+}
+.content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.content a {
+    display: block;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #ff4081;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.carousel-inner > .carousel-caption {
+    position: relative;
+    font-size:30px;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    color: pink;
+    padding: 10px;
+    border-radius: 5px;
+}
+.carousel-img {
+    width: 100%; /* 가로폭을 100%로 설정 */
+    height: 1000px; /* 원하는 높이로 설정 */
+    object-fit: cover; /* 비율을 유지하면서 잘림 */
+}
+
+.carousel-slide img {
+        width: 100%; /* 또는 원하는 픽셀 크기, 예: 600px */
+        height: auto; /* 또는 'height: 400px;'과 같이 고정 높이 */
+        object-fit: cover; /* 이미지가 비율에 맞게 잘림 */
+    }
+
+.best_poem {
+    /* background: url('photo/best_poem.jpeg') no-repeat center center;*/
+    text-align: left; /* Align text to the left */
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 500px; /* Set a fixed width */
+    margin: 20px; /* Add margin for spacing */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+    left: 20px; /* Position it 20px from the left */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-size:500px auto ;
+}
+
+.best_poem h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.best_poem .poem {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.best_poem .poem .line {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.best_poem .poem h2 {
+    font-size: 24px;
+    color: #ff4081;
+    margin: 0 10px 0 0;
+}
+
+.best_poem .poem p {
+    font-size: 20px;
+    color: #333;
+    margin: 0;
+}
+
+.best_poem .poem h2.first {
+    font-weight: bold;
+}
+.cake_video {
+    position:absolute;
+    max-width:500px;
+    margin: 20px;
+    left:750px;
+    top:480px;
+}
+
+.logo .accent {
+    font-weight: 700;
+  }
+  
+  ul.menu {
+    display: flex;
+    list-style: none;
+  
+    gap: 24px;
+  }
+  
+  ul.menu > li {
+    display: block;
+  }
+  
+  .menu {
+    color: #717f8e;
+  }
+  
+  .menu > .active {
+    color: #161346;
+  }
+  
+  .site.menu {
+    flex: 1 1 auto;
+  }
+  
+  main {
+    display: grid;
+    margin: 24px 0;
+    grid-template-areas:
+      'prices assets'
+      'prices order'
+      'prices .';
+    grid-template-rows: 307px 1fr 1fr;
+    grid-template-columns: 1fr 437px;
+    gap: 24px;
+  }
+  
+
+.cake_video video {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.reviews {
+    padding: 40px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+.reviews .review {
+    margin-bottom: 20px;
+}
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+.footer nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: white;
+}
+.footer .social-icons {
+    margin-top: 10px;
+}
+.footer .social-icons img {
+    width: 24px;
+    height: 24px;
+    margin: 0 5px;
+}

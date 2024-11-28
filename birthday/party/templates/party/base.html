@@ -1,0 +1,115 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="{% static 'party/js/INDE.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'party/css/main.css' %}">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>특별한 날</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="{% url 'main' %}">이거 누르면 노래 나옴</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href={% url 'room' %}><span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">성준이</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">귀요미</a>
+                </li>
+            </ul>
+            <span class="navbar-text">
+                <a href="{% url 'login' %}"> LOGIN / SIGN_UP </a>
+            </span>
+        </div>
+    </nav>
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            {% for slide in carousel_slides %}
+                <li data-target="#carouselExampleIndicators" data-slide-to="{{ forloop.counter0 }}" class="{% if forloop.first %}active{% endif %}"></li>
+            {% endfor %}
+        </ol>
+        <div class="carousel-inner">
+            {% for slide in carousel_slides %}
+                <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                    <img class="d-block w-100 carousel-img" src="{% static slide.image %}" alt="{{ slide.alt_text }}">
+                    <div class="carousel-caption">
+                        <h3 style="font-size:32px;"></h3>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+    <section class="best_poem">
+        <h1>성준이 삼행시</h1>
+        {% block poem%}
+        {% endblock poem %}
+    </section>
+
+    <!-- YouTube 배경 음악 -->
+    {% block youtube_sound %}
+    <div class="youtube-sound">
+        <!-- 유튜브 iframe 코드로 배경 음악 재생 (영상 숨김) -->
+        <iframe 
+            width="0" 
+            height="0" 
+            src="https://www.youtube.com/embed/kt9n5E71EPI?autoplay=1&loop=1&playlist=kt9n5E71EPI&muted=0&controls=0" 
+            title="HAPPY BIRTHDAY" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
+    </div>
+    {% endblock youtube_sound %}
+
+    <section class="content">
+        {% block section%}
+        {% endblock section %}
+    </section>
+
+    <section class="reviews">
+        <div class="review">
+            <p>편지 눌러서 편지 써주세요 ~!!</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <nav>
+            <a href="#">최강</a>
+            <a href="#">김성준</a>
+            <a href="#">디테일</a>
+            <a href="#">못해서 아쉽당</a>
+        </nav>
+
+        <div class="social-icons">
+            <a href="https://www.facebook.com"><img src="{% static 'party/images/facebook_logo.png' %}" alt="페이스북"></a>
+            <a href="https://www.instagram.com/"><img src="{% static 'party/images/Instagram_logo.webp' %}" alt="인스타"></a>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

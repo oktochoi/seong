@@ -1,0 +1,29 @@
+{% extends "./base.html" %}
+{% load static %}
+
+{% block poem%}
+<div class="poem">
+    <div class="line">
+        <h2 class="first">김:</h2>
+        <p>성준 수령 동무</p>
+    </div>
+    <div class="line">
+        <h2 class="first">성:</h2>
+        <p>일을</p>
+    </div>
+    <div class="line">
+        <h2 class="first">준:</h2>
+        <p>비하라</p>
+    </div>
+</div>
+{% endblock poem%}
+
+
+{% block section%}
+{%for Content in Contents%}
+<div class="section">
+    <img src={%get_static_prefix%}{{Content.img_path}} alt="카드 만들기 이미지">
+    <a href="{{Content.site}}">{{Content.description}}</a>
+</div>
+{%endfor%}
+{% endblock section%}

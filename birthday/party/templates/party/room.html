@@ -1,0 +1,27 @@
+{%load static%}
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <title>room</title>
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Static CSS File -->
+    <link rel="stylesheet" href="{% static 'party/css/room.css' %}">
+</head>
+<body>
+    <div class = "room">
+        <button class = "create"> create room </button> <br>
+        <button class = "delete"> delete room </button> <br>
+        <button class = "share"> share room </button> <br>
+        <a id = "back" href="{% url 'main' %}"> 돌아가기 </a>
+    </div>
+</body>
+</html>
